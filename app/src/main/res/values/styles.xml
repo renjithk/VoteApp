@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="App.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="App.Theme.No.ActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Login.Input.Box" parent="Widget.Design.TextInputLayout">
+        <item name="colorControlActivated">@color/hint_text_color</item>
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="Input.Box.Error" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Input.Box.Hint" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/hint_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Login.Button.SignIn" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/bg_btn_selector</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:buttonStyle">?android:attr/buttonStyleSmall</item>
+    </style>
+
+    <style name="Animation.Progress.Dialog" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+</resources>

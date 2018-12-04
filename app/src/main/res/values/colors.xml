@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="hint_text_color">#1f62d1</color>
+    <color name="btn_signin_bg">#315FAA</color>
+    <color name="btn_signin_disabled">#97ade1</color>
+    <color name="chosen_candidate_tick">#54a256</color>
+    <color name="toolbar_bg">#99323232</color>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">iVote</string>
+    <string name="api_base_url">http://webtask.future-processing.com:8069</string>
+    <string name="hint_forename">Forename</string>
+    <string name="hint_surname">Surname</string>
+    <string name="hint_pesel">Pesel Number</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="loader_initial_data_check">Loading your essentials...</string>
+    <string name="db_name">voting_db</string>
+    <string name="login_warning_empty_forename">Forename can\'t be empty</string>
+    <string name="login_warning_empty_surname">Surname can\'t be empty</string>
+    <string name="login_warning_empty_pesel">Pesel number can\'t be empty</string>
+    <string name="login_warning_pesel_invalid">Pesel number must be 11 digits long</string>
+    <string name="cast_vote_title">Cast your vote</string>
+    <string name="menu_cast_vote">Vote</string>
+    <string name="warning_no_candidate_chosen_title">Oops!</string>
+    <string name="warning_no_candidate_chosen_message">You must choose atleast one candidate to register your vote</string>
+    <string name="loader_register_vote">Registering your vote...</string>
+    <string name="warning_blacklisted_title">Sorry</string>
+    <string name="warning_blacklisted_message">You can\'t register your vote because you fall in the blacklisted category</string>
+    <string name="election_trend_title">Election Trend</string>
+    <string name="message_after_voting">Thank you for registering your vote!</string>
+    <string name="message_already_voted_user">You have already voted once!</string>
+    <string name="alert_when_no_internet">No internet, unable to sync</string>
+</resources>

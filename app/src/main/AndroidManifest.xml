@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.voting">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".VotingApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/App.Theme">
+
+        <activity android:name=".ui.UserLogin"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.CastVoteActivity"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/App.Theme.No.ActionBar"
+            android:label="@string/cast_vote_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.UserLogin"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android:support.PARENT_ACTIVITY"
+                android:value="com.voting.ui.UserLogin"/>
+        </activity>
+
+        <activity android:name=".ui.ElectionTrendActivity"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/App.Theme.No.ActionBar"
+            android:label="@string/election_trend_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.UserLogin"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data android:name="android:support.PARENT_ACTIVITY"
+                android:value="com.voting.ui.UserLogin"/>
+        </activity>
+
+        <service
+            android:name=".ui.background.DataFetchService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+    </application>
+</manifest>

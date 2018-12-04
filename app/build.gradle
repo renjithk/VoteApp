@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+ext { //variable definitions
+    //build variable definitions
+    sdkVersion = 27
+    buildToolsVersion = '27.0.2'
+    sdkVersionMin = 23
+    sdkVersionTarget = 27
+    appVersionNumber = 1
+    appVersionName = '1.0.0'
+
+    //dependencies version definitions
+    supportLibVersion = '27.1.1'
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.10.0'
+    butterknifeVersion = '7.0.1'
+    daggerVersion = '2.12'
+    eventBusVersion = '3.0.0'
+    constraintLayoutVersion = '1.1.0'
+    roomVersion = '1.1.1'
+    chartVersion = 'v3.0.3'
+}
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.voting"
+        minSdkVersion sdkVersionMin.toInteger()
+        targetSdkVersion sdkVersionTarget.toInteger()
+        versionCode appVersionNumber.toInteger()
+        versionName "$appVersionName"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "com.github.PhilJay:MPAndroidChart:$chartVersion"
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife:$butterknifeVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:cardview-v7:$supportLibVersion"
+}
